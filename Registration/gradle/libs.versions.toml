@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.2"
+authKt = "2.0.0"
 bom = "3.1.2"
 coreSplashscreen = "1.0.1"
 kotlin = "2.0.0"
@@ -21,12 +22,15 @@ postgrestKt = "0.7.6"
 supabaseAndroid = "1.2.0"
 supabaseKtVersion = "1.0.0"
 xmodule_z = "VERSION"
+navigationRuntimeKtx = "2.8.8"
+navigationCompose = "2.8.8"
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version = "1.10.1" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.15.0" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-lifecycle-runtime-ktx-v260 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version = "2.8.7" }
+auth-kt = { module = "io.github.jan-tennert.supabase-kt:auth-kt", version.ref = "authKt" }
 bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "bom" }
 jetbrains-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -48,10 +52,13 @@ ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version = "3.1.1" 
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version = "3.1.1" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "postgrestKt" }
+storage-kt = { module = "io.github.jan-tennert.supabase-kt:storage-kt", version.ref = "authKt" }
 supabase-android = { module = "io.github.jan-tennert.supabase-kt:supabase-android", version.ref = "supabaseAndroid" }
 supabase-kt = { module = "io.supabase:supabase-kt", version = "1.2.0" }
 supabase-kt-v100 = { module = "io.supabase:supabase-kt", version.ref = "supabaseKtVersion" }
 xmodule_z = { module = "io.github.jan-tennert.supabase:[module]", version.ref = "xmodule_z" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

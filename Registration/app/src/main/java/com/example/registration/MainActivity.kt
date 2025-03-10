@@ -1,8 +1,6 @@
 package com.example.registration
 
 import android.os.Bundle
-import android.util.Log
-import io.github.jan.supabase.postgrest.query.PostgrestBuilder
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -15,19 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.lifecycleScope
-import io.github.jan.supabase.postgrest.query.PostgrestResult
-import io.github.jan.supabase.postgrest.postgrest
-import com.example.registration.ui.theme.RegistrationTheme
-import io.github.jan.supabase.SupabaseClient
-import io.github.jan.supabase.createSupabaseClient
-import io.github.jan.supabase.postgrest.Postgrest
-import io.github.jan.supabase.supabaseJson
-import io.ktor.websocket.WebSocketDeflateExtension.Companion.install
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.example.registration.Presentation.theme.RegistrationTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -43,7 +29,7 @@ class MainActivity : ComponentActivity() {
         }
 
         enableEdgeToEdge()
-        getData()
+        //getData()
         setContent {
             RegistrationTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -55,12 +41,13 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
+}
+/*
     private fun getData() {
         lifecycleScope.launch {
             val client = getClient()
-            val SupabaseReponse = client.postgrest["users"].select()
-            val data = SupabaseReponse.decodeList<User>()
+            val supabaseReponse = client.postgrest["users"].select()
+            val data = supabaseReponse.decodeList<User>()
             Log.e("supabase", data.toString())
             }
         }
@@ -78,13 +65,13 @@ class MainActivity : ComponentActivity() {
 @kotlinx.serialization.Serializable
 data class User(
     val id: Int = 0,
-    val user_name: String = "",
-    val real_name: String = "",
+    val username: String = "",
+    val realname: String = "",
     val email: String = "",
     val country: String = "",
-    val avatar_url: String = ""
+    val avatarurl: String = ""
 )
-
+*/
 
 
 
