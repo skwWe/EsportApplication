@@ -51,11 +51,10 @@ android {
         buildToolsVersion = "35.0.0"
     }
 
+
     dependencies {
-        implementation("io.github.jan-tennert.supabase:realtime-kt")
+        implementation(libs.realtime.kt)
         implementation(platform(libs.bom))
-        implementation(libs.storage.kt)
-        implementation(libs.auth.kt)
         implementation(libs.jetbrains.kotlinx.serialization.json)
         implementation(libs.postgrest.kt)
         implementation(libs.ktor.client.cio)
@@ -82,5 +81,7 @@ android {
         androidTestImplementation(libs.androidx.ui.test.junit4)
         debugImplementation(libs.androidx.ui.tooling)
         debugImplementation(libs.androidx.ui.test.manifest)
+        implementation(libs.androidx.animation.core.android)
     }
 }
+

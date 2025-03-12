@@ -1,5 +1,5 @@
 [versions]
-agp = "8.8.2"
+agp = "8.6.0"
 authKt = "2.0.0"
 bom = "3.1.2"
 coreSplashscreen = "1.0.1"
@@ -24,6 +24,7 @@ supabaseKtVersion = "1.0.0"
 xmodule_z = "VERSION"
 navigationRuntimeKtx = "2.8.8"
 navigationCompose = "2.8.8"
+animationCoreAndroid = "1.7.8"
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version = "1.10.1" }
@@ -52,6 +53,7 @@ ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version = "3.1.1" 
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version = "3.1.1" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
 postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "postgrestKt" }
+realtime-kt = { module = "io.github.jan-tennert.supabase:realtime-kt" }
 storage-kt = { module = "io.github.jan-tennert.supabase-kt:storage-kt", version.ref = "authKt" }
 supabase-android = { module = "io.github.jan-tennert.supabase-kt:supabase-android", version.ref = "supabaseAndroid" }
 supabase-kt = { module = "io.supabase:supabase-kt", version = "1.2.0" }
@@ -59,6 +61,7 @@ supabase-kt-v100 = { module = "io.supabase:supabase-kt", version.ref = "supabase
 xmodule_z = { module = "io.github.jan-tennert.supabase:[module]", version.ref = "xmodule_z" }
 androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-animation-core-android = { group = "androidx.compose.animation", name = "animation-core-android", version = "1.8.0-beta03" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
